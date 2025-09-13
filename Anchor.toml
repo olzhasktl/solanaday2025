@@ -1,0 +1,24 @@
+[toolchain]
+package_manager = "yarn"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+my_project = "6ZAmv942Z6KnN6QNRATu3qJo6gRnprqWR7KJLMrKkMSA"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+deposit = "node scripts/deposit.js"
+initialize_pool = "node scripts/initialize_pool.js"
+check_deposits = "node scripts/check_deposits.js"
+create_user = "node scripts/create_user_with_deposit.js"
+list_all_deposits = "node scripts/list_all_deposits.js"
