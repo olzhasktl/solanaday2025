@@ -5,14 +5,14 @@ package_manager = "yarn"
 resolution = true
 skip-lint = false
 
-[programs.localnet]
+[programs.devnet]
 my_project = "6ZAmv942Z6KnN6QNRATu3qJo6gRnprqWR7KJLMrKkMSA"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "localnet"
+cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
@@ -22,3 +22,7 @@ initialize_pool = "node scripts/initialize_pool.js"
 check_deposits = "node scripts/check_deposits.js"
 create_user = "node scripts/create_user_with_deposit.js"
 list_all_deposits = "node scripts/list_all_deposits.js"
+test_devnet = "node scripts/test_devnet.js"
+test_deposit = "node scripts/test_deposit_devnet.js"
+check_solend_balance = "node scripts/check_solend_balance.js"
+deposit_current = "node scripts/deposit_current_user.js"
