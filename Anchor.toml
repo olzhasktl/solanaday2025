@@ -6,7 +6,7 @@ resolution = true
 skip-lint = false
 
 [programs.devnet]
-my_project = "6ZAmv942Z6KnN6QNRATu3qJo6gRnprqWR7KJLMrKkMSA"
+my_project = "3dGV3HXpcuYTifzFg8dCCMxgDEVhQpHtoCLJXAcK6PAE"
 
 [registry]
 url = "https://api.apr.dev"
@@ -16,17 +16,23 @@ cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
-test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
-deposit = "node scripts/deposit.js"
-initialize_pool = "node scripts/initialize_pool.js"
 check_deposits = "node scripts/check_deposits.js"
-create_user = "node scripts/create_user_with_deposit.js"
-list_all_deposits = "node scripts/list_all_deposits.js"
-test_devnet = "node scripts/test_devnet.js"
-test_deposit = "node scripts/test_deposit_devnet.js"
 check_solend_balance = "node scripts/check_solend_balance.js"
+create_user = "node scripts/create_user_with_deposit.js"
+deposit = "node scripts/deposit.js"
+deposit_15_from_wallets = "node scripts/deposit_15_from_wallets.js"
+test_secure_vrf = "node scripts/test_secure_vrf.js"
+deposit_wallet4_10 = "node scripts/deposit_wallet4_10.js"
 deposit_current = "node scripts/deposit_current_user.js"
-withdraw_current = "node scripts/withdraw_current_user.js"
-distribute_usdc = "node scripts/distribute_usdc.js"
 deposit_from_wallets = "node scripts/deposit_from_wallets.js"
-collect_from_wallets = "node scripts/collect_from_wallets.js"
+deposit_wallet4 = "node scripts/deposit_wallet4.js"
+distribute_30_usdc = "node scripts/distribute_30_usdc.js"
+distribute_usdc = "node scripts/distribute_usdc.js"
+initialize_pool = "node scripts/initialize_pool.js"
+list_all_deposits = "node scripts/list_all_deposits.js"
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+test_deposit = "node scripts/test_deposit_devnet.js"
+test_devnet = "node scripts/test_devnet.js"
+vrf_lottery = "node scripts/vrf_lottery.js"
+withdraw_current = "node scripts/withdraw_current_user.js"
+claim_reward = "node scripts/claim_reward.js"
